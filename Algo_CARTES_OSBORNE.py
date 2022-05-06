@@ -130,7 +130,9 @@ class Creature(Carte):
         if(self.attaque):
             self.pv = self.pv - degats
             print("Vous avez attaqué " + self.name + "Vous perdez des points de vies")
-
+        if(self.attaque):
+            self.pv = self.pv <= degats
+            print("Vous avez attaqué " + self.name + "Vous avez perdu toutes vos points de vies, votre creature va donc à la défausse")
     
 
 class Blast(Carte):
